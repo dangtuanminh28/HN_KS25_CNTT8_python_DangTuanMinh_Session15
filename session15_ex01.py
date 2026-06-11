@@ -44,18 +44,17 @@ def handle_sale():
     global inventory_stock, total_revenue
     print("--- BÁN HÀNG ---")
     qty_input = input("Nhập số lượng mua: ").strip()
-    
     if qty_input == "" or not qty_input.isdigit():
-        print("Lỗi: Dữ liệu nhập vào phải lớn hơn 0.")
+        print("Dữ liệu nhập vào phải lớn hơn 0!")
         return
         
     quantity = int(qty_input)
     if quantity <= 0:
-        print("Lỗi: Dữ liệu nhập vào phải lớn hơn 0.")
+        print("Dữ liệu nhập vào phải lớn hơn 0!")
         return
         
     if quantity > inventory_stock:
-        print(f"Lỗi: Không đủ hàng trong kho. Tồn kho hiện tại chỉ còn {inventory_stock}.")
+        print(f"Không đủ hàng trong kho. Tồn kho hiện tại chỉ còn {inventory_stock}.")
         return
         
     price_input = input("Nhập đơn giá ($): ").strip()
